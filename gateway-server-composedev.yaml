@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: products-route
+          uri: lb://PRODUCT-SERVER
+          predicates:
+            - Path=/products/**
+          filters:
+            - PrefixPath=/api/v1
