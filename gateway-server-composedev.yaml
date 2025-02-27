@@ -10,3 +10,7 @@ spring:
             - Path=/products/**
           filters:
             - PrefixPath=/api/v1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registry-service:8762/eureka
